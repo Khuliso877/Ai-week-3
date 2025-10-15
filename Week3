@@ -38,3 +38,42 @@ Community Support
 - Backed by Google.
 - Massive global community, especially in deep learning.
 - Rich ecosystem (TensorBoard, TF Lite, TF Serving).
+
+Part 3
+MNIST - Overrepresentation of certain digits<br>- Uniform handwriting style (mostly from US Census workers)<br>- Poor generalization to diverse handwriting (e.g., different cultures, left-handed writing)
+Amazon Reviews - Skewed sentiment due to fake or incentivized reviews<br>- Imbalanced representation across product categories or brands<br>- Language bias (e.g., non-native English phrasing misinterpreted as negative)
+
+TensorFlow Fairness Indicators
+Helps detect and visualize disparities in model performance across subgroups (e.g., gender, region, product type). For example:
+from tensorflow_model_analysis.addons.fairness.view import widget_view
+widget_view.render_fairness_indicator(eval_result)
+
+spaCy Rule-Based Systems
+You can define custom patterns to reduce bias in entity recognition or sentiment. For example, if spaCy mislabels “Apple” as a fruit instead of a brand, you can override it:
+from spacy.tokens import Span
+def custom_ner(doc):
+    for ent in doc.ents:
+        if ent.text == "Apple":
+            ent.label_ = "ORG"
+    return doc
+nlp.add_pipe(custom_ner, after="ner")
+
+2. Troubleshooting Challenge: Fixing Buggy TensorFlow Code
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(128, input_shape=(28, 28), activation='relu'),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+model.fit(x_train, y_train, epochs=5)
+
+Fixed Version
+# Flatten input and use sparse_categorical_crossentropy for integer labels
+model = tf.keras.Sequential([
+    tf.keras.layers.Flatten(input_shape=(28, 28)),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(10, activation='softmax')
+])
+
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.fit(x_train, y_train, epochs=5)
