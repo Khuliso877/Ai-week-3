@@ -17,3 +17,24 @@ spaCy is a powerful NLP library that goes far beyond what basic string methods l
 • 	Linguistic Awareness: spaCy understands grammar and syntax. It can identify parts of speech, named entities (like people, places), and sentence boundaries.
 • 	Tokenization & Lemmatization: Instead of just splitting on spaces, spaCy intelligently breaks text into tokens and reduces words to their base forms (e.g., “running” → “run”).
 • 	Efficiency: It’s optimized in Cython, making it fast and scalable for large corpora.
+
+2. Comparative Analysis
+
+Scikit-learn is best suited for classical machine learning tasks such as regression, classification, clustering, and dimensionality reduction using models like decision trees, support vector machines, and linear regression.
+TensorFlow is designed for building and training deep learning models, especially for complex tasks involving images, text, speech, and time-series data using neural networks like CNNs, RNNs, and transformers.
+
+Ease of Use for Beginners
+- Scikit-learn:
+✅ Very beginner-friendly. Simple API, minimal setup, and great for learning ML fundamentals.
+- TensorFlow:
+⚠️ More complex. Requires understanding of tensors, graphs, and model architecture. TensorFlow 2.x improved usability with Keras integration, but still steeper than Scikit-learn.
+
+Community Support
+- Scikit-learn:
+- Strong academic and industry adoption.
+- Extensive documentation and tutorials.
+- Great for traditional ML workflows.
+- TensorFlow:
+- Backed by Google.
+- Massive global community, especially in deep learning.
+- Rich ecosystem (TensorBoard, TF Lite, TF Serving).
