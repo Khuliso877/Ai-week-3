@@ -44,6 +44,3 @@ This repository showcases multiple machine learning and NLP projects built using
 - **Mitigation Tools**: TensorFlow Fairness Indicators and spaCy’s rule-based overrides were explored to reduce bias.
 
 
-## 📦 Installation
-```bash
-pip install -r requirements.txt
