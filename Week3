@@ -1,0 +1,19 @@
+# Part 1
+## Q1 Q1: TensorFlow vs. PyTorch — Key Differences & When to Use
+TensorFlow uses a static computation graph, meaning you define the entire model structure before running it.
+PyTorch uses dynamic computation graphs, allowing you to build and modify the model on-the-fly during execution. This makes debugging and experimentation easier.
+
+TensorFlow: Ideal for production environments, mobile/web deployment, or when using tools like TFX or TensorBoard.
+PyTorch: Preferred for research, rapid prototyping, and when you want more flexibility and cleaner debugging.
+
+## Q2: Two Use Cases for Jupyter Notebooks in AI
+1. 	Exploratory Data Analysis (EDA)
+Jupyter makes it easy to visualize datasets using , , or  plots inline. You can iteratively clean, transform, and inspect data with immediate feedback.
+2. 	Model Prototyping and Experimentation
+You can test different machine learning models, tweak hyperparameters, and document results all in one place. It’s especially useful for sharing results with collaborators or stakeholders.
+
+## Q3: How spaCy Enhances NLP vs. Basic Python String Ops
+spaCy is a powerful NLP library that goes far beyond what basic string methods like , , or  can do. Here’s how:
+• 	Linguistic Awareness: spaCy understands grammar and syntax. It can identify parts of speech, named entities (like people, places), and sentence boundaries.
+• 	Tokenization & Lemmatization: Instead of just splitting on spaces, spaCy intelligently breaks text into tokens and reduces words to their base forms (e.g., “running” → “run”).
+• 	Efficiency: It’s optimized in Cython, making it fast and scalable for large corpora.
